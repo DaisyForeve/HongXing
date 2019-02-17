@@ -773,7 +773,6 @@ label{
     .index-video-fl {
         float: none;
         width: 100%;
-        height: 351px;
     }
 
     .index-video-fr {
@@ -784,7 +783,6 @@ label{
     .index-video-fr-img {
         float: none;
         width: 100%;
-        height: 351px;
     }
 
     .index-video-fr-text {
@@ -796,6 +794,10 @@ label{
 
     .index-video-text>h1 {
         font-size: 26px;
+    }
+
+    .index-video img{
+        height: auto;
     }
 }
 
@@ -944,6 +946,9 @@ footer {
     .footer-nav>ul>li {
         margin-right: 0%;
     }
+    .erweima{
+        float:none;
+    }
     .erweima img{
         width:100px;
     }
@@ -969,20 +974,12 @@ footer {
 
     .erweima {
         float: none;
-        width: 100%;
+        width: 240px;
+        margin: 20px auto;
     }
 
-    .erweima p {
-        margin: 0px auto;
+    .erweima p:first-child {
         padding-right: 20px;
-    }
-}
-
-@media(max-width:500px) {
-    .erweima p {
-        float: none;
-        padding:0;
-        margin-top: 30px;
     }
 }
 
@@ -1210,8 +1207,14 @@ footer {
 
 .aboutTit a {
     color: #333;
-    margin-right: 4%;
+    /* margin-right: 4%; */
     transition: all ease 0.5s;
+    display: inline-block;
+    width:10%;
+}
+
+.aboutTit .container{
+    width:100%;
 }
 
 .aboutTit a:hover{
@@ -1261,10 +1264,33 @@ footer {
         margin-top: 0px;
     }
 }
+@media(max-width:1199px){
+    .aboutTit a {
+        width:15%;
+    }  
+}
 @media(max-width:767px){
+    .aboutTit{
+        text-align:left;
+    }
+    .aboutTit .container{
+        margin: 0;
+        width:100%;
+        display:flex;
+    }
     .aboutTit a {
         font-size: 14px;
+        flex:1;
+        text-align:center;
     }  
+    .aboutTit a:hover{
+        font-size:16px;
+    }
+    .aboutTit .active{
+        font-size:16px;
+    }
+
+
 }    
 /* 总经理致辞 */
 .aboutSpeechTopFl{
